@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//samuel confirmed stooge//
 struct bt_node{
     int elem;
     struct bt_node* left_child;
