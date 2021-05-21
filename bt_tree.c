@@ -37,10 +37,10 @@ int bt_length(struct bt_node* root){
     int right_depth = bt_length(root->right_child);
 
     if(left_depth > right_depth){
-        return left_depth;
+        return left_depth+1;
     }
     else{
-        return right_depth;
+        return right_depth+1;
     }
 }
 
@@ -59,6 +59,6 @@ int main(){
     bt_node_create(&root_right,3);
     root_node.left_child = &root_left;
     root_node.right_child = &root_right;
-    printf("%d \n",bt_length(root_node));
+    printf("%d \n",bt_length(&root_node));
     return 0;
 } 
